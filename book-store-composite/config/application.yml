@@ -1,0 +1,22 @@
+app:
+  name: book-store
+
+server:
+  port: 8091
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://app_db:3306/book_store?allowPublicKeyRetrieval=true&useSSL=false
+    username: alain
+    password: aPTR1JS3nJIf6iB
+    initialization-mode: always
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
